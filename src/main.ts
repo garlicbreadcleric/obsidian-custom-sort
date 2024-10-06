@@ -22,6 +22,7 @@ import {
 import {around} from 'monkey-around';
 import {
 	folderSort_vUpTo_1_6_0,
+	getComparator,
 	getSortedFolderItems_vFrom_1_6_0,
 	ObsidianStandardDefaultSortingName,
 	ProcessingContext,
@@ -94,6 +95,8 @@ export default class CustomSortPlugin
 	initialAutoOrManualSortingTriggered: boolean
 
 	fileExplorerFolderPatched: boolean
+
+	getComparator = getComparator;
 
 	showNotice(message: string, timeout?: number) {
 		if (this.settings.notificationsEnabled || (Platform.isMobile && this.settings.mobileNotificationsEnabled)) {
